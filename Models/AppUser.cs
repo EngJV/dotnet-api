@@ -8,6 +8,7 @@ namespace api.Models
 {
     public class AppUser : IdentityUser
     {
+        public List<Portfolio> Portfolios { get; set; } = new List<Portfolio>(); // This is a navigation property. It is a list of portfolios that the user owns.
 
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace api.Models
 {
+    [Table("Stocks")] // this is only for aesthtic purposes
     public class Stock
     {
         public int Id { get; set; }
@@ -25,6 +26,9 @@ namespace api.Models
         public long MarketCap { get; set; }
 
         // Relations
-        public List<Comment> Comments { get; set; } = new List<Comment>();
+        public List<Comment> Comments { get; set; } = new List<Comment>(); // This is a navigation property. It is a list of comments that the stock owns
+
+        public List<Portfolio> Portfolios { get; set; } = new List<Portfolio>(); // This is a navigation property. It is a list of portfolios that the user owns.
+
     }
 }

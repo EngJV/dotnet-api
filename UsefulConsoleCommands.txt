@@ -1,0 +1,4 @@
+dotnet ef migrations migrations add InitialCreate # create the migrations files
+dotnet ef database update # update the database with the migrations already created
+
+dotnet ef migrations add PortfolioManyToMany # add a new migration
