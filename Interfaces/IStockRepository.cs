@@ -12,11 +12,13 @@ namespace api.Interfaces
     {
         Task<List<Stock>> getAllAsync(QueryObject query);
         Task<Stock?> getByIdAsync(int id); // why Stock have a ? in the end, it means that it can be null
+        Task<Stock?> GetBySymbolAsync(string symbol);
         Task<Stock> CreateAsync(Stock stockModel);
         Task<Stock?> UpdateAsync(int id, UpdateStockRequestDto stockDto);
         Task<Stock?> DeleteAsync(int id);
         // Super Handy Method
         Task<bool> StockExists(int id); // check if the stock exists
+
 
     }
 }

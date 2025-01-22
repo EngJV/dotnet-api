@@ -97,7 +97,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddScoped<IStockRepository, StockRepository>(); // AddScoped: Agrega un servicio de alcance de solicitud para la interfaz IStockRepository y su implementación StockRepository.
 builder.Services.AddScoped<ICommentRepository, CommentRepository>(); // AddScoped: Agrega un servicio de alcance de solicitud para la interfaz ICommentRepository y su implementación CommentRepository.
 builder.Services.AddScoped<ITokenService, TokenService>(); // AddScoped: Agrega un servicio de alcance de solicitud para la interfaz ITokenService y su implementación TokenService.
-
+builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>(); // AddScoped: Agrega un servicio de alcance de solicitud para la interfaz IPortfolioRepository y su implementación PortfolioRepository.
 
 var app = builder.Build(); // Construye la aplicación utilizando el constructor configurado anteriormente.
 
